@@ -1,0 +1,59 @@
+@font-face {
+    font-family: actonia;
+    src: url('../fonts/actonia/Actonia_PERSONAL.ttf');
+}
+
+body {
+    line-height: normal;
+}
+
+header {
+    background-color: #000;
+    height: 80px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+}
+
+.titulo-header {
+    font-family: actonia;
+    font-size: 45px;
+    color: #fff;
+    padding: 15px;
+}
+
+.menu-header {
+    position: absolute;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    bottom: 0;
+    right: 5%;
+}
+
+.menu-header ul {
+    font-size: 18px;
+    list-style-type: none;
+}
+
+.menu-header ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.menu-header a {
+    color: #fff;
+    font-family: Arial, Sans-serif;
+    text-decoration: none;
+    text-align: center;
+    padding: 30px 8px 26px;
+}
+
+.menu-header li a:hover {
+    background-color: #1B1A1A;
+    border-style: solid;
+    border-bottom-width: 13px;
+    border-color: #fff;
+}

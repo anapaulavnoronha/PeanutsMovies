@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>PeanutsMovies</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+
+
+    <!-- Unslider para o Banner-->
+    <link rel="stylesheet" href="unslider-master/dist/css/unslider.css">
+    <link rel="stylesheet" href="unslider-master/dist/css/unslider-dots.css">
+
+    <link rel="stylesheet" href="css/cabecalho.css">
+    <link rel="stylesheet" href="css/banner.css">
+</head>
+
+<header>
+    <div class="container">
+        <h1 class="titulo-header">PeanutsMovies</h1>
+        <nav class="menu-header">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Filmes</a></li>
+                <li><a href="#">Séries</a></li>
+                <li><a href="#">Notícias</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<section class="banner">
+    <ul>
+        <li>
+            <div class="slide-text1">
+                <p>Todas as novidades do cinema
+                    <br>em uma página</p>
+            </div>
+            <img src="img/pets.jpg" alt="Suicide Squad">
+        </li>
+        <li>
+            <div class="slide-text2">
+                <p>Descubra os filmes e as séries de maior sucesso</p>
+            </div>
+            <img src="img/suicide.jpg" alt="Pets">
+        </li>
+        <li>
+            <div class="slide-text3">
+                <p>Notícias e matérias em tempo real</p>
+            </div>
+            <img src="img/dead.jpg" alt="Me before you">
+        </li>
+    </ul>
+</section>
+
+
+
+<!-- Para plugin unslider -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="unslider-master/src/js/unslider.js"></script>
+
+<script>
+    $(function () {
+        $('.banner').unslider({
+            autoplay: false,
+            nav: true,
+            infinite: false,
+            //pro texto trocar em cada banner
+            animation: 'fade',
+            arrows: true,
+            fluid: false
+        });
+    });
+</script>
+
+
+<body>
+
+</body>
+
+</html>

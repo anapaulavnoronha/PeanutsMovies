@@ -1,0 +1,106 @@
+.banner {
+    height: 600px;
+    position: relative;
+    width: 100%;
+    overflow: auto;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* Style the text over the slides */
+
+.slide-text1 {
+    position: absolute;
+    left: 19%;
+    top: 7%;
+    line-height: 10%;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1.2);
+    font: bold 2.5em sans-serif;
+}
+
+.slide-text2 {
+    position: absolute;
+    left: 17%;
+    top: 43%;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1.5);
+    font: bold 2.4em sans-serif;
+}
+
+.slide-text3 {
+    position: absolute;
+    left: 25%;
+    top: 23%;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    font: bold 2.3em Helvetica, Arial, sans-serif;
+}
+
+.unslider {
+    position: relative;
+}
+
+.unslider-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80%;
+    z-index: 1000;
+    /* Para os dots ficarem sobre as imagens */
+}
+
+.unslider-nav ol li {
+    width: 15px;
+    height: 15px;
+    margin-left: 6px;
+    border-radius: 13px;
+    border: 2px solid #fff;
+}
+
+
+/*Arrows*/
+
+.unslider-arrow {
+    position: absolute;
+    top: 40%;
+    z-index: 1000;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    visibility: hidden;
+}
+
+
+/* Change the arrow styles - You could also use an image instead*/
+
+.unslider-arrow {
+    visibility: hidden;
+    /* Hide the default arrows */
+}
+
+
+/* Use dynamic content to add in a different character and show it */
+
+.unslider-arrow:before {
+    visibility: visible;
+}
+
+.unslider-arrow.prev:before {
+    content: '';
+    background-image: url(../img/arrow-left.png);
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.unslider-arrow.next:before {
+    content: '';
+    background-image: url(../img/arrow-right.png);
+    width: 32px;
+    height: 32px;
+    display: block;
+}
