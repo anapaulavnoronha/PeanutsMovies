@@ -48,12 +48,12 @@ header {
     font-family: Arial, Sans-serif;
     text-decoration: none;
     text-align: center;
-    padding: 30px 8px 26px;
+    padding: 30px 8px 24px;
 }
 
 .menu-header li a:hover {
     background-color: #1B1A1A;
     border-style: solid;
-    border-bottom-width: 13px;
+    border-bottom-width: 7px;
     border-color: #fff;
 }
