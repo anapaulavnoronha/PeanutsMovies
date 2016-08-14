@@ -68,22 +68,29 @@
         <h2 class="subtitulo">Filmes</h2>
         <div class="container">
             <p class="subtitulo-conteudo">Nos cinemas</p>
-            <div class="filmes">
+            <div class="filmes mostra-primeiros-filmes">
+                <button id="botao-mais-filmes-prev"></button>
                 <ul>
                     <li class="img1"></li>
                     <li class="img2"></li>
                     <li class="img3"></li>
                     <li class="img4"></li>
+                    <li class="img5"></li>
+                    <li class="img6"></li>
+                    <li class="img7"></li>
+                    <li class="img8"></li>
                 </ul>
+                <button id="botao-mais-filmes-next"></button>
             </div>
+
         </div>
     </section>
 
     <!-- Para plugin unslider -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-
-
     <script src="unslider-master/src/js/unslider.js"></script>
+
+    <script src="js/secaoFilmes.js"></script>
 
     <script>
         $(function () {
@@ -93,7 +100,7 @@
                 infinite: false,
                 //pro texto trocar em cada banner
                 animation: 'fade',
-                arrows: true,
+                arrows: false,
                 fluid: false
             });
         });
