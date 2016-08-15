@@ -37,29 +37,35 @@
     </header>
 
 
-
-    <section class="banner">
-        <ul>
-            <li>
-                <div class="slide-text1">
-                    <p>Todas as novidades do cinema
-                        <br>em uma página</p>
-                </div>
-                <img src="img/pets.jpg" alt="Suicide Squad">
-            </li>
-            <li>
-                <div class="slide-text2">
-                    <p>Descubra os filmes e as séries de maior sucesso</p>
-                </div>
-                <img src="img/suicide.jpg" alt="Pets">
-            </li>
-            <li>
-                <div class="slide-text3">
-                    <p>Notícias e matérias em tempo real</p>
-                </div>
-                <img src="img/dead.jpg" alt="Me before you">
-            </li>
-        </ul>
+    <section class="contem-banner">
+        <section class="banner">
+            <ul>
+                <li>
+                    <div>
+                        <p class="slide-titulo">Filmes
+                        </p>
+                        <p class="slide-texto">Todas as novidades do cinema em uma única página</p>
+                    </div>
+                    <img src="img/ban1.png" alt="Suicide Squad">
+                </li>
+                <li>
+                    <div>
+                        <p class="slide-titulo">Séries
+                        </p>
+                        <p class="slide-texto">Descubra as séries de maior sucesso</p>
+                    </div>
+                    <img src="img/ban2.png" alt="Pets">
+                </li>
+                <li>
+                    <div>
+                        <p class="slide-titulo">Notícias
+                        </p>
+                        <p class="slide-texto">Informações e curiosidades sobre o mundo da sétima arte</p>
+                    </div>
+                    <img src="img/ban4.png" alt="Me before you">
+                </li>
+            </ul>
+        </section>
 
 
     </section>
@@ -67,7 +73,8 @@
     <section class="secao-filme">
         <h2 class="subtitulo">Filmes</h2>
         <div class="container">
-            <p class="subtitulo-conteudo">Nos cinemas</p>
+            <img class="icone-secao" src="img/movie1.png" alt="Filmes">
+            <p class="subtitulo-conteudo">NOS CINEMAS</p>
             <div class="filmes mostra-primeiros-filmes">
                 <button id="botao-mais-filmes-prev"></button>
                 <ul>
@@ -95,12 +102,12 @@
     <script>
         $(function () {
             $('.banner').unslider({
-                autoplay: false,
+                autoplay: true,
                 nav: true,
                 infinite: false,
                 //pro texto trocar em cada banner
                 animation: 'fade',
-                arrows: false,
+                arrows: true,
                 fluid: false
             });
         });
