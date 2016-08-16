@@ -7,10 +7,12 @@ function mostraFilmes() {
     if (filmes.hasClass('mostra-primeiros-filmes')) {
         filmes.removeClass('mostra-primeiros-filmes');
         filmes.addClass('mostra-outros-filmes');
+
     } else if (filmes.hasClass('mostra-outros-filmes')) {
         filmes.removeClass('mostra-outros-filmes');
         filmes.addClass('mostra-primeiros-filmes');
     }
+
 
 
 }

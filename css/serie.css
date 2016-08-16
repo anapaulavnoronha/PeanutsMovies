@@ -1,0 +1,9 @@
+.secao-serie {
+    background-color: black;
+    height: 500px;
+}
+
+.secao-serie .subtitulo {
+    color: #fff;
+    padding-top: 20px;
+}
