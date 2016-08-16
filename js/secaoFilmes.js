@@ -17,7 +17,7 @@ function mostraFilmes() {
 }
 
 /*para janela popup */
-$('#mostra-sinopse').on('click', mostraPopUp);
+$('.mostra-sinopse').on('click', mostraPopUp);
 
 function mostraPopUp() {
     var divPop = document.querySelector('#janela-popup');
