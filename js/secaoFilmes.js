@@ -17,16 +17,39 @@ function mostraFilmes() {
 }
 
 /*para janela popup */
-$('.mostra-sinopse').on('click', mostraPopUp);
+var filmesLinks = document.querySelectorAll('.mostra-sinopse');
 
-function mostraPopUp() {
-    var divPop = document.querySelector('#janela-popup');
-    divPop.style.display = "block";
+for (var i = 0; i < filmesLinks.length; i++) {
+    var filmeLink = filmesLinks[i];
+    filmeLink.addEventListener('click', mostraModal);
 }
 
-$('#fecha-popup').on('click', fechaPopUp);
+//mostra modal
+function mostraModal() {
 
-function fechaPopUp() {
-    var divPop2 = document.querySelector('#janela-popup');
-    divPop2.style.display = "none";
+    //pegando o titulo do elemento que eu clicar
+    var tituloFilme = this.lastElementChild.innerHTML;
+
+    //criando a modal
+    var divModal = $('<div>').addClass('modal-filmes');
+    var buttonModal = $('<button>Fechar</button>').addClass('fecha-modal');
+    buttonModal.click(fechaModal);
+
+    var pModal = $('<p>').textContent = tituloFilme;
+    var modal = divModal.append(buttonModal).append(pModal);
+
+    //linkando a modal com elemento da pagina
+    $('.filmes').append(modal);
+
+    /*var divPop = document.querySelector('.modal-filmes');
+    divPop.style.display = "block";*/
+}
+
+//fecha modal
+function fechaModal() {
+    console.log(this);
+    console.log('oi');
+    var xpto = $('.modal-filmes');
+
+
 }

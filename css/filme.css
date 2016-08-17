@@ -126,8 +126,8 @@ ul.img-list li:hover span.text-content {
 
 /*janela popup com sinopse dos filmes */
 
-#janela-popup {
-    display: none;
+.modal-filmes {
+    display: block;
     position: absolute;
     background-color: #cdcdcd;
     top: 10%;
@@ -139,4 +139,14 @@ ul.img-list li:hover span.text-content {
     height: 260px;
     border: 1px solid #d0d0d0;
     opacity: 0.8;
+}
+
+.modal-filmes-visivel {
+    display: block;
+}
+
+.fecha-modal {
+    display: block;
+    height: 20px;
+    width: auto;
 }
