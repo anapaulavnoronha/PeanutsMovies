@@ -33,21 +33,35 @@ function mostraModal() {
 
     //criando a modal
     var divModal = $('<div>').addClass('modal-filmes');
+
+
+    //engloba tituloModal e buttonModal
+    var divCabecalhoModal = $('<div>').addClass('modal-cabecalho-filmes');
+
     var buttonModal = $('<button>').addClass('botao-fecha-modal');
     buttonModal.click(fechaModal);
 
     var pModal = $('<p>').addClass('titulo-modal').html(tituloFilme);
 
+    divCabecalhoModal.append(pModal).append(buttonModal);
+
+    //fora da divCabecalhoModal
     var sinopseModal = $('<p>').addClass('sinopse-filme').html(sinopseFilme).css('display', 'block');
 
-    var modal = divModal.append(buttonModal).append(pModal).append(sinopseModal);
+    var modal = divModal.append(divCabecalhoModal).append(sinopseModal);
 
-    //linkando a modal com elemento da pagina
-    $('.filmes').append(modal);
+    setTimeout(function () {
+        modal.fadeIn(100);
+        $('.filmes').append(modal);
+    }, 400);
 
 }
 
 //fecha modal
 function fechaModal() {
-    $('.modal-filmes').hide();
+    var modalFilme = $('.modal-filmes').addClass('modal--some');
+    setTimeout(function () {
+        modalFilme.hide();
+    }, 600);
+
 }
