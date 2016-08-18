@@ -28,28 +28,26 @@ for (var i = 0; i < filmesLinks.length; i++) {
 function mostraModal() {
 
     //pegando o titulo do elemento que eu clicar
-    var tituloFilme = this.lastElementChild.innerHTML;
+    var tituloFilme = $(this).find('.titulo-filme').text();
+    var sinopseFilme = $(this).find('.sinopse-filme').text();
 
     //criando a modal
     var divModal = $('<div>').addClass('modal-filmes');
-    var buttonModal = $('<button>Fechar</button>').addClass('fecha-modal');
+    var buttonModal = $('<button>').addClass('botao-fecha-modal');
     buttonModal.click(fechaModal);
 
-    var pModal = $('<p>').textContent = tituloFilme;
-    var modal = divModal.append(buttonModal).append(pModal);
+    var pModal = $('<p>').addClass('titulo-modal').html(tituloFilme);
+
+    var sinopseModal = $('<p>').addClass('sinopse-filme').html(sinopseFilme).css('display', 'block');
+
+    var modal = divModal.append(buttonModal).append(pModal).append(sinopseModal);
 
     //linkando a modal com elemento da pagina
     $('.filmes').append(modal);
 
-    /*var divPop = document.querySelector('.modal-filmes');
-    divPop.style.display = "block";*/
 }
 
 //fecha modal
 function fechaModal() {
-    console.log(this);
-    console.log('oi');
-    var xpto = $('.modal-filmes');
-
-
+    $('.modal-filmes').hide();
 }
