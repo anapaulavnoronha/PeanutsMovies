@@ -27,15 +27,15 @@ for (var i = 0; i < filmesLinks.length; i++) {
 //mostra modal
 function mostraModal() {
 
-    //pegando o titulo do elemento que eu clicar
+    //pegando o titulo, sinops e qtsestrela do elemento que eu clicar
     var tituloFilme = $(this).find('.titulo-filme').text();
     var sinopseFilme = $(this).find('.sinopse-filme').text();
+    var qtdEstrelas = $(this).find('.qtd-estrelas').text();
 
     //criando a modal
     var divModal = $('<div>').addClass('modal-filmes');
 
-
-    //engloba tituloModal e buttonModal
+    //criando a div cabecalho (engloba tituloModal e buttonModal) ficara dentro da modal
     var divCabecalhoModal = $('<div>').addClass('modal-cabecalho-filmes');
 
     var buttonModal = $('<button>').addClass('botao-fecha-modal');
@@ -43,11 +43,19 @@ function mostraModal() {
 
     var pModal = $('<p>').addClass('titulo-modal').html(tituloFilme);
 
-    divCabecalhoModal.append(pModal).append(buttonModal);
+    //divCabecalhoModal com o titulo
+    divCabecalhoModal.append(pModal);
+
+    //estrelas ficam no cabecalho - divCabecalhoModal com as estrelas
+    verificaQtdEstrelas(qtdEstrelas, divCabecalhoModal);
+
+    //divCabecalhoModal com o botao - div Pronta
+    divCabecalhoModal.append(buttonModal);
 
     //fora da divCabecalhoModal
     var sinopseModal = $('<p>').addClass('sinopse-filme').html(sinopseFilme).css('display', 'block');
 
+    //Modal completa
     var modal = divModal.append(divCabecalhoModal).append(sinopseModal);
 
     setTimeout(function () {
@@ -64,4 +72,20 @@ function fechaModal() {
         modalFilme.hide();
     }, 600);
 
+}
+
+function verificaQtdEstrelas(qtdEstrelas, divCabecalhoModal) {
+    console.log('oi');
+    var estrelaModal = $('<p>').addClass('qtd-estrelas');
+
+    if (qtdEstrelas == '1') {
+        estrelaModal.addClass('uma-estrela');
+        return divCabecalhoModal.append(estrelaModal);
+    } else if (qtdEstrelas == '2') {
+        estrelaModal.addClass('duas-estrelas');
+        return divCabecalhoModal.append(estrelaModal);
+    } else {
+        estrelaModal.addClass('tres-estrelas');
+        return divCabecalhoModal.append(estrelaModal);
+    }
 }

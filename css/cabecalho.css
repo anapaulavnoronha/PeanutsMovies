@@ -10,6 +10,11 @@ body {
 header {
     background-color: #000;
     height: 80px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10000;
+    /*box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);*/
 }
 
 .container {
