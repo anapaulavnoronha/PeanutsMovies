@@ -32,10 +32,9 @@ header {
 
 .menu-header {
     position: absolute;
-    padding-right: 30px;
     padding-bottom: 30px;
     bottom: 0;
-    right: 5%;
+    right: 0;
 }
 
 .menu-header ul {

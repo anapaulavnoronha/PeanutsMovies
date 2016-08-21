@@ -1,0 +1,33 @@
+.rodape {
+    height: 100px;
+    width: auto;
+    background-color: black;
+}
+
+.social {}
+
+.social li {
+    display: inline-block;
+    float: right;
+    margin-left: 1.5%;
+    padding-top: 3%;
+}
+
+.social a {
+    height: 32px;
+    width: 32px;
+    text-indent: -999999px;
+    display: block;
+}
+
+.social a[href*="instagram.com"] {
+    background-image: url(../img/rodape/instagram.png);
+}
+
+.social a[href*="facebook.com"] {
+    background-image: url(../img/rodape/facebook.png);
+}
+
+.social a[href*="twitter.com"] {
+    background-image: url(../img/rodape/twitter.png);
+}
