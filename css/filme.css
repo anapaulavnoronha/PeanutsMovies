@@ -150,15 +150,17 @@ ul.img-list li:hover span.text-content {
 }
 
 .modal-cabecalho-filmes {
+    position: relative;
     height: 20%;
     border-bottom: 1px solid #dcdcdc;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .titulo-modal {
+    position: absolute;
+    left: 0px;
     display: inline-block;
     font-family: sans-serif;
     font-size: 20px;
@@ -168,6 +170,8 @@ ul.img-list li:hover span.text-content {
 }
 
 .botao-fecha-modal {
+    position: absolute;
+    right: 0px;
     display: inline-block;
     margin-right: 2%;
     border: none;
@@ -179,6 +183,8 @@ ul.img-list li:hover span.text-content {
 
 .qtd-estrelas {
     display: none;
+    position: absolute;
+    left: 30%;
 }
 
 .uma-estrela {
