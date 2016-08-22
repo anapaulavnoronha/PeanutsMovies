@@ -189,23 +189,37 @@ ul.img-list li:hover span.text-content {
 
 .uma-estrela {
     display: inline-block;
-    background-image: url(../img/estrelaBranca.png);
+    background-image: url(../img/estrelas/es1.png);
     height: 16px;
-    width: 16px;
+    width: 84px;
 }
 
 .duas-estrelas {
     display: inline-block;
-    background-image: url(../img/estrelaAmarela.png);
+    background-image: url(../img/estrelas/es2.png);
     height: 16px;
-    width: 16px;
+    width: 84px;
 }
 
 .tres-estrelas {
     display: block;
-    background-image: url(../img/estrelaAmarela2.png);
+    background-image: url(../img/estrelas/es3.png);
     height: 16px;
-    width: 16px;
+    width: 84px;
+}
+
+.quatro-estrelas {
+    display: inline-block;
+    background-image: url(../img/estrelas/es4.png);
+    height: 16px;
+    width: 84px;
+}
+
+.cinco-estrelas {
+    display: block;
+    background-image: url(../img/estrelas/es5.png);
+    height: 16px;
+    width: 84px;
 }
 
 .sinopse-filme {

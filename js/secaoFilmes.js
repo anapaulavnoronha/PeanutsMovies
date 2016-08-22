@@ -75,17 +75,31 @@ function fechaModal() {
 }
 
 function verificaQtdEstrelas(qtdEstrelas, divCabecalhoModal) {
-    console.log('oi');
     var estrelaModal = $('<p>').addClass('qtd-estrelas');
 
-    if (qtdEstrelas == '1') {
+    switch (qtdEstrelas) {
+    case '1':
         estrelaModal.addClass('uma-estrela');
         return divCabecalhoModal.append(estrelaModal);
-    } else if (qtdEstrelas == '2') {
+        break;
+    case '2':
         estrelaModal.addClass('duas-estrelas');
         return divCabecalhoModal.append(estrelaModal);
-    } else {
+        break;
+    case '3':
         estrelaModal.addClass('tres-estrelas');
         return divCabecalhoModal.append(estrelaModal);
+        break;
+    case '4':
+        estrelaModal.addClass('quatro-estrelas');
+        return divCabecalhoModal.append(estrelaModal);
+        break;
+    case '5':
+        estrelaModal.addClass('cinco-estrelas');
+        return divCabecalhoModal.append(estrelaModal);
+        break;
+    default:
+        console.log('erro');
     }
+
 }
